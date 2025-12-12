@@ -1,5 +1,5 @@
 
-#  Zera Store  🔳🔲🔶
+#  Zera Store  🔳
 
 Tienda de moda realizada con React JS. 
 
