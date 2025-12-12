@@ -1,19 +1,34 @@
 import { createContext, useState } from "react";
 
-// Crear el contexto
 export const CarritoContext = createContext();
 
-// Proveedor del contexto
 export const CarritoProvider = ({ children }) => {
   const [carrito, setCarrito] = useState([]);
 
   const agregarAlCarrito = (producto) => {
     setCarrito([...carrito, producto]);
+    
+    const productoExistente = carrito.findIndex(item => item.id === producto.id);
+    
+    if (productoExistente !== -1) {
+      const nuevoCarrito = [...carrito];
+      const cantidadActual = nuevoCarrito[productoExistente].cantidad || 1;
+      nuevoCarrito[productoExistente] = {
+        ...nuevoCarrito[productoExistente],
+        cantidad: cantidadActual + 1
+      };
+      setCarrito(nuevoCarrito);
+    } else {
+      setCarrito([...carrito, { ...producto, cantidad: 1 }]);
+    }
   };
 
-  // Usamos filter() para crear un nuevo array que excluye el elemento
+  const actualizarCantidad = (indice, nuevaCantidad) => {
+    const nuevoCarrito = [...carrito];
+    nuevoCarrito[indice] = { ...nuevoCarrito[indice], cantidad: nuevaCantidad };
+    setCarrito(nuevoCarrito);
+  };
 
-  // con el índice dado.
   const eliminarDelCarrito = (indiceAEliminar) => {
     setCarrito(carrito.filter((_, indice) => indice !== indiceAEliminar));
   };
@@ -24,7 +39,13 @@ export const CarritoProvider = ({ children }) => {
 
   return (
     <CarritoContext.Provider
-      value={{ carrito, agregarAlCarrito, eliminarDelCarrito, vaciarCarrito }}
+    value={{
+        carrito,
+        agregarAlCarrito,
+        actualizarCantidad,
+        eliminarDelCarrito,
+        vaciarCarrito,
+      }}
     >
       {children}
     </CarritoContext.Provider>

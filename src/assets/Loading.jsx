@@ -2,7 +2,11 @@ const Loading = () => {
     return (
     <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 300 150">
+    viewBox="0 0 300 150"
+    width="250"
+    height="250"
+    >
+    
     <path 
         fill="none"
         stroke="#FFAA17"

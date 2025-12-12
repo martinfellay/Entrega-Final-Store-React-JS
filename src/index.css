@@ -1,31 +1,28 @@
 body {
-    font-family: "Lucida Console", Courier, monospace;
+    font-family: "Forum", serif;
     max-width: 70%;
     margin: 0 auto;
 }
 
-.container {
-    display: flex;
-    gap: 20px;
-   }
-   .imagen {
+
+   /* .imagen {
      height: 100px;
      width: 100px;
-   }
+   } */
    
-   .panel {
+   /* .panel {
      flex: 1;
-   }
+   } */
    
-   .botonAgregarProducto {
+   /* .botonAgregarProducto {
      font-weight: 600;
      display: flex;
      justify-content: end;
      align-items: center;
      gap: 6px;
-   }
+   } */
    
-   .productoItem {
+   /* .productoItem {
      padding: 10px; 
      margin: 10px 0; 
      border: 1px solid gray; 
@@ -34,4 +31,4 @@ body {
      display: flex; 
      justify-content: space-between;
      align-items: center;
-   }
+   } */

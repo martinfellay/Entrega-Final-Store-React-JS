@@ -1,15 +1,12 @@
-.container {
+/* .container {
   display: flex;
-  gap: 20px;
-}
-.imagen {
-  height: 450px;
-  width: 450px;
-  margin: 20px;
-}
+  max-width: 80vw;
+} */
 
-.panel {
-  flex: 1;
+.imagen {
+  height: 350px;
+  width: 90%;
+  margin: 20px;
 }
 
 .botonAgregarProducto {
@@ -23,20 +20,21 @@
 }
 
 .productoItem {
-  margin: 20px 0;
-  padding: 22px 0px;
   border: 1px solid gray; 
   cursor: pointer; 
-  background-color: white; 
-  display: flex; 
+  border-color:rgb(201, 201, 201); 
+  display: flex;
+  flex: 1;
+  min-width: 370px;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
 }
 
-.imgcontainer{
+
+/* .imgcontainer{
   position: relative;
-}
+} */
 
 .colcontainer{
   display: flex;
@@ -57,7 +55,8 @@ h2,p{
 
 .ripleDiv {
   display: flex;
-  justify-content: center; /* Centers horizontally */
+  justify-content: center;
   align-items: center;
   height: 30vh;
 }
+

@@ -1,4 +1,4 @@
-.container {
+/* .container {
     display: flex;
     gap: 20px;
 }
@@ -28,4 +28,18 @@
   display: flex; 
   justify-content: space-between;
   align-items: center;
+} */
+
+/* .d-none {
+  display: none !important;
 }
+
+@media (min-width: 720x) {
+  .d-md-inline-block {
+      display: inline-block !important;
+  }
+
+  .d-none-md{
+      display: none !important;
+  }
+}  */

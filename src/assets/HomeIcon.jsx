@@ -1,0 +1,23 @@
+const HomeIcon = () => {
+    return(
+        <svg 
+        fill="#000000" 
+        width="55"
+        height="55"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        ></g>
+        <g id="SVGRepo_iconCarrier">
+            {" "}
+            <path d="M20.707 11.293l-8-8a1 1 0 0 0-1.414 0l-8 8a1 1 0 0 0 1.414 1.414L5 12.414V20a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-7.586l.293.293a1 1 0 0 0 1.414-1.414zM13 19h-2v-4h2v4zm4 0h-2v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5H7v-8.586l5-5 5 5V19z"></path>{" "}
+        </g>
+        </svg>
+    )
+};
+
+export default HomeIcon;

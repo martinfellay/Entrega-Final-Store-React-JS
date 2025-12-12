@@ -1,10 +1,14 @@
+/* 
 .footer {
     border-top: 1px solid #cccaca; 
-    color: #202020; 
+    color: #202020;
     padding: 30px 40px;
     margin-top: auto; 
     text-align: center; 
 }
+
+border-top-1 p-30 mt-auto text-center */
+
 
 .footerNav {
     list-style: none;
@@ -17,7 +21,7 @@
 
 .footerLink {
     text-decoration: none;
-    color: #1f1e1e;
+    /* color: #1f1e1e; */
     font-size: 14px;
     transition: color 0.3s;
 }
@@ -26,8 +30,10 @@
     color: #535252; 
 }
 
-.copyright {
-    font-size: 12px;
+/* .copyright {
+    font-size: 7px !important;
     color: #888;
     margin-top: 15px;
-}
+    text-align: center;
+    width:auto;
+} */

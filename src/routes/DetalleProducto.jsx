@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext  } from "react";
 import { useParams } from "react-router-dom";
-import Loading from "../assets/Loading"
 import styles from './DetalleProducto.module.css'; 
+import Loading from "../assets/Loading"
 import AddToCart from '../assets/AddToCart'
 import { CarritoContext } from '../context/CarritoContext';
 
@@ -9,20 +9,22 @@ const ProductoDetalle = () => {
   
   const { id } = useParams();
   const [producto, setProducto] = useState(null);
+  const [cargando, setCargando] = useState(true);
+  const [error, setError] = useState(null);
 
   const { agregarAlCarrito } = useContext(CarritoContext);
+  const URL = "https://690d56a0a6d92d83e8512618.mockapi.io/Productos/";
 
   useEffect(() => {
-    fetch(`https://690d56a0a6d92d83e8512618.mockapi.io/Productos/${id}`)
+    fetch(`${URL}${id}`)
       .then(respuesta => respuesta.json())
-      .then(dato => setProducto(dato));
+      .then(dato => setProducto(dato))
+      .catch((error) => setError('Error al cargar el producto'))
+      .finally(() => setCargando(false))
   },[id]);
 
-  if(!producto)
-    return 
-    <>
-      <Loading/>
-    </>
+  if (cargando) return <div className={styles.ripleDiv}><Loading/></div>;
+  if (error) return error;
   
   return(
     <>

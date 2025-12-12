@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import styles from './Navbar.module.css'; 
 import { useAuthContext } from '../context/AuthContext';
 
-const Nav = () => {
+const Navbar = () => {
     const { usuario } = useAuthContext();
     const esAdmin = usuario === 'admin';
 
     return(
-        <nav>
+        <nav className="d-sm-none d-md-block">
             <ul className={styles.lista}>
                 <li className={styles.item}>
                     <Link to="/" className={styles.link}>Inicio</Link>
@@ -23,6 +23,5 @@ const Nav = () => {
     );
 }
 
-export default Nav; 
-
+export default Navbar; 
 
